@@ -53,7 +53,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: #191970;
     color: #fff;
     transition: all 0.3s;
 }
@@ -164,11 +164,11 @@ table {
     border-spacing: 0;
     width: 100%;
     border: 1px solid #ddd;
-    margin: 0;
+    margin: solid;
   }
   
   th, td {
     text-align: center;
-    margin: auto;
+    margin: 0;
   }
   
