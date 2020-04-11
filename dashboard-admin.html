@@ -1,123 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widh, initial-scale=1.0"/>
+<html>
 
-        <title> Dasboard Admin</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Dashboard Admin</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css//style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 </head>
-<body>
-     <!--Style-->
-     <link
-     rel="stylesheet"
-     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-   />
-   <link rel="stylesheet" href="./assets/css/sidebar.css" />
-   <link
-     href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
-     rel="stylesheet"
-   />
- </head>
- <!-- Admin Panel-->
- <div class="header">
-     <h2-font-size="20">Welcome, Admin</h2>
- </div>
- <!-- The sidebar -->
- <div id="main">
-  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
-  </div>
- <div id="mySidebar" class="sidebar">
- <br><h3-font-size="10">Company Logo</h3></br>
- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- <a href="#">Menu 1</a>
- <a href="#"><li><lu>&nbsp;Menu 1.1 </li><lu></a>
- <a href="#"><li><lu>&nbsp;Menu 1.2 </li><lu></a>
- <a href="#">Menu 2</a>
- <a href="#"><li><lu>&nbsp;Menu 2.1 </li><lu></a>
- <a href="#"><li><lu>&nbsp;Menu 2.2 </li><lu></a>
- <a href="#">Menu 3</a>
- <a href="#"><li><lu>&nbsp;Menu 3.1 </li><lu></a>
- <a href="#"><li><lu>&nbsp;Menu 3.2 </li><lu></a>
- <a href="#">Menu 4</a>
- <a href="#"><li><lu>Menu 4.1 </li><lu></a>
- <a href="#"><li><lu>Menu 4.2 </li><lu></a>
-</div>
-<div class = "text-center">
-    <br><p> lorem Ipsum </p></br>
-    <div style="overflow-x:auto;">
-      <table>
-        <tr>
-          <th>lorem Ipsum</th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-          <th>lorem Ipsum </th>
-        </tr>
-        <tr>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-        </tr>
-        <tr>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-        </tr>
-        <tr>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-          <td>lorem Ipsum </td>
-        </tr>
-      </table>
-    </div>
-    </div>
-    
-<script>
-   /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
- function openNav() {
- document.getElementById("mySidebar").style.width = "16%";
- document.getElementById("main").style.marginLeft = "16%";
-}
 
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-function closeNav() {
-document.getElementById("mySidebar").style.width = "0";
-document.getElementById("main").style.marginLeft = "0";
-}
- </script>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Company Logo</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#Submenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu 1</a>
+                    <ul class="collapse list-unstyled" id="Submenu1">
+                        <li>
+                            <a href="#">Menu 1.1</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 1.2</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 1.3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Submenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu 2</a>
+                    <ul class="collapse list-unstyled" id="Submenu2">
+                        <li>
+                            <a href="#">Menu 2.1</a>
+                            <a href="#">Menu 2.2</a>
+                            <a href="#">Menu 2.3</a>
+                            </li>
+                        </ul>
+                            
+                </li>
+                <li>
+                    <a href="#Submenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu 3</a>
+                    <ul class="collapse list-unstyled" id="Submenu3">
+                        <li>
+                            <a href="#">Menu 3.1</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 3.2</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 3.3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#Submenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Menu 4</a>
+                    <ul class="collapse list-unstyled" id="Submenu4">
+                        <li>
+                            <a href="#">Menu 4.1</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 4.2</a>
+                        </li>
+                        <li>
+                            <a href="#">Menu 4.3</a>
+                        </li>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Menu</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Welcome, Admin</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class = "text-center">
+                <br><p> lorem Ipsum </p></br>
+                <div style="overflow-x:auto;">
+                  <table>
+                    <tr>
+                      <th>lorem Ipsum</th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                      <th>lorem Ipsum </th>
+                    </tr>
+                    <tr>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                    </tr>
+                    <tr>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                    </tr>
+                    <tr>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                      <td>lorem Ipsum </td>
+                    </tr>
+                  </table>
+                </div>
+                </div>
+           
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
